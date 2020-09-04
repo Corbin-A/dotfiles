@@ -102,18 +102,10 @@ source $ZSH/oh-my-zsh.sh
 
 # ls aliases. I prefer the gls colors, so if on mac, change ls to gls
 if [[ "$(uname)" == "Darwin" ]]; then 
-    alias ctags="`brew --prefix`/bin/ctags"
     alias ls='gls -F --color'
 else
     alias ls='ls -F --color'
 fi
-alias conde='conda deactivate'
-alias poetrysh='conde && poetry shell && conde'
-alias gs="git status -sb"
-alias gst="git status"
-alias ga="git add"
-alias gaa="git add --all"
-alias gc="git commit"
 alias ll="ls -alh"
 alias lls='ls -lh'
 
