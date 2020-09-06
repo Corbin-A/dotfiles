@@ -4,6 +4,9 @@ set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
+" Plugins
+filetype indent plugin on
+
 " Show relative line numbers.
 set number
 set relativenumber
@@ -17,6 +20,8 @@ set noswapfile
 
 " Disable the default Vim startup message.
 set shortmess+=I
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
 
 " map leader to spacebar
 nnoremap <SPACE> <Nop>
@@ -48,28 +53,16 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-" Plugins
-filetype indent plugin on
-
 " Open split windows to bottom and right, not top and left
 set splitbelow
 set splitright
 
 " Color Scheme (Gruvbox)
-let g:gruvbox_contrast_dark = 'hard'
-set termguicolors
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
 let g:gruvbox_invert_selection='0'
 autocmd vimenter * colorscheme gruvbox
 set background=dark
 
 " CoC Configs
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
