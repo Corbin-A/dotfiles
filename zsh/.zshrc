@@ -122,9 +122,9 @@ alias gaa="git add --all"
 alias gc="git commit"
 
 # Editing and sourcing vimrc and zshrc files
-alias evrc="vim ~/.vimrc"
+alias evrc="vim ~/.vim/vimrc"
 alias ezrc="vim ~/.zshrc"
-alias svrc="source ~/.vimrc"
+alias svrc="source ~/.vim/vimrc"
 alias szrc="source ~/.zshrc"
 
 # virtual env aliases
