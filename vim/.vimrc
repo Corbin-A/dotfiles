@@ -1,12 +1,6 @@
 " Set vim to use vim functionality instead of vi
 set nocompatible
 
-" Change tabs to spaces and tabwidths to 4 spaces
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-
 " Turn on syntax highlighting.
 syntax on
 
