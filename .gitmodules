@@ -22,3 +22,6 @@
 [submodule "vim/.vim/pack/vendor/start/vim-slime"]
 	path = vim/.vim/pack/vendor/start/vim-slime
 	url = https://github.com/jpalardy/vim-slime.git
+[submodule "vim/.vim/pack/vendor/opt/firenvim"]
+	path = vim/.vim/pack/vendor/opt/firenvim
+	url = https://github.com/glacambre/firenvim.git
