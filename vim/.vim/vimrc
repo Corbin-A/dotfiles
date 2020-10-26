@@ -58,6 +58,7 @@ set splitbelow
 set splitright
 
 " Color Scheme (Gruvbox)
+set termguicolors
 let g:gruvbox_invert_selection='0'
 autocmd vimenter * colorscheme gruvbox
 set background=dark
