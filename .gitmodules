@@ -25,3 +25,6 @@
 [submodule "vim/.vim/pack/vendor/opt/firenvim"]
 	path = vim/.vim/pack/vendor/opt/firenvim
 	url = https://github.com/glacambre/firenvim.git
+[submodule "vim/.vim/pack/vendor/start/vim-conda"]
+	path = vim/.vim/pack/vendor/start/vim-conda
+	url = https://github.com/cjrh/vim-conda.git
