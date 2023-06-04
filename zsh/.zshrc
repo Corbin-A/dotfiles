@@ -74,7 +74,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd osx poetry vi-mode)
+plugins=(git fasd macos poetry vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,7 +112,7 @@ alias lls='ls -lh'
 # Other sensible system aliases
 alias mkdir="mkdir -p"
 alias mv="mv -i"
-alias v="vim"
+alias v="nvim"
 
 # git aliases
 alias gs="git status -sb"
@@ -122,20 +122,15 @@ alias gaa="git add --all"
 alias gc="git commit"
 
 # Editing and sourcing vimrc and zshrc files
-alias evrc="vim ~/.vim/vimrc"
-alias ezrc="vim ~/.zshrc"
-alias svrc="source ~/.vim/vimrc"
+alias evrc="v ~/.config/nvim/"
+alias ezrc="v ~/.zshrc"
+alias svrc="source ~/.config/nvim/init.lua"
 alias szrc="source ~/.zshrc"
 
 # virtual env aliases
 alias conde='conda deactivate'
 alias poetrysh='conde && poetry shell && conde'
 alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
-
-# Project specific alias
-alias cdri='cd ~/gitrepos/ri_covid'
-alias cdnb='cd ~/gitrepos/ri_covid/notebooks'
-alias cari='conda activate ri_covid'
 
 # By Corbin: 
 # Add prefix for dl remote machine
@@ -173,3 +168,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# configured by homebrew
+fpath+=/opt/homebrew/share/zsh/site-functions
+autoload -Uz compinit && compinit
