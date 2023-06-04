@@ -3,11 +3,13 @@
 #     PATH=""
 #     source /etc/profile
 # fi
+ZSH_TMUX_AUTOSTART=true
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+ZSH_DISABLE_COMPFIX="true"
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
@@ -74,7 +76,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd macos poetry vi-mode)
+plugins=(git fasd macos vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,6 +133,9 @@ alias szrc="source ~/.zshrc"
 alias conde='conda deactivate'
 alias poetrysh='conde && poetry shell && conde'
 alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
+
+# Misc
+alias fixbt="sudo kill -9 `ps ax | grep 'coreaudiod' | grep -v grep | awk '{print $1}'`"
 
 # By Corbin: 
 # Add prefix for dl remote machine
